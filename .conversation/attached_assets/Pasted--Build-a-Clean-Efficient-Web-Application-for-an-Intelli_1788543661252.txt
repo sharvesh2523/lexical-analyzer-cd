@@ -1,0 +1,953 @@
+# Build a Clean, Efficient Web Application for an Intelligent Lexical Analysis and Token Classification System
+
+Create a **modern, clean, professional, highly efficient web application** for my capstone project:
+
+## Project Title
+
+**An Intelligent Lexical Analysis And Token Classification System For Efficient Source Code Processing**
+
+The website must be a **functional demonstration of the project**, not merely a static project-information website.
+
+The core purpose is to allow a user to enter/upload source code and visually see how the proposed lexical analysis system processes it.
+
+The implementation must closely follow the project concept, terminology, modules, objectives, and workflow described below.
+
+---
+
+# 1. CORE IDEA
+
+The application should simulate/implement an intelligent lexical analyzer that:
+
+1. Accepts source code as input.
+2. Preprocesses the source code.
+3. Removes unnecessary whitespace, tabs, blank lines, and comments.
+4. Scans the cleaned source code character by character.
+5. Identifies valid lexemes.
+6. Classifies tokens.
+7. Detects invalid/unknown tokens.
+8. Reports lexical errors with line numbers.
+9. Generates a structured/final token stream.
+10. Maintains and displays a symbol table.
+
+The system should feel like a **real compiler front-end tool** rather than a normal website.
+
+The three major modules from the project are:
+
+### Module 1 — Source Code Processing
+
+Input source code → preprocessing → cleaned source code.
+
+### Module 2 — Lexical Analysis & Token Classification
+
+Cleaned source code → lexeme identification → token classification → structured token stream.
+
+### Module 3 — Error Detection & Token Output
+
+Token validation → lexical error detection → final token stream + symbol table.
+
+These modules and their functions should be clearly reflected in the UI.
+
+---
+
+# 2. DESIGN REQUIREMENTS
+
+Make the interface:
+
+* Extremely clean
+* Minimal
+* Professional
+* Modern
+* Academic/technical
+* Fast
+* Responsive
+* Easy to understand
+* Suitable for a college capstone project demonstration
+
+Avoid:
+
+* Excessive animations
+* Unnecessary gradients
+* Huge decorative graphics
+* Cluttered cards
+* Excessive rounded corners
+* Fake statistics
+* Unrelated features
+* Stock images
+
+The interface should prioritize **functionality and readability**.
+
+Use a professional developer-tool aesthetic similar to modern code editors and compiler tools.
+
+Suggested visual direction:
+
+* White/light background OR very subtle dark developer theme
+* One restrained accent color
+* Monospace font for code
+* Clean sans-serif font for normal UI
+* Strong visual hierarchy
+* Thin borders
+* Subtle shadows
+* Compact spacing
+* Clear status indicators
+
+---
+
+# 3. MAIN APPLICATION STRUCTURE
+
+Create the website with the following sections:
+
+## A. Landing / Dashboard
+
+At the top:
+
+**Intelligent Lexical Analyzer**
+
+Subtitle:
+
+**Analyze, classify, and validate source code efficiently.**
+
+Brief description:
+
+> An intelligent lexical analysis and token classification system for efficient source code processing.
+
+Include a primary CTA:
+
+**Analyze Source Code**
+
+And a secondary option:
+
+**View System Architecture**
+
+Do not make the landing page overly large.
+
+---
+
+# 4. MAIN ANALYZER INTERFACE
+
+This is the most important page.
+
+Create a professional IDE-like analyzer interface.
+
+Layout:
+
+### Left Side — Source Code Input
+
+Create a code editor with:
+
+* Line numbers
+* Syntax-like highlighting
+* Monospace font
+* Scrollable editor
+* Copy button
+* Clear button
+* Upload file button
+* Example code button
+
+Support source code input such as C initially.
+
+Example:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a = 10;
+    int b = 20;
+    int sum = a + b;
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}
+```
+
+Below the editor:
+
+**Language:** C
+
+and a large button:
+
+**Analyze Code**
+
+Also provide:
+
+**Reset**
+
+---
+
+# 5. ANALYSIS PIPELINE
+
+After clicking Analyze Code, display a clear processing pipeline:
+
+```text
+SOURCE CODE
+     ↓
+SOURCE CODE PROCESSING
+     ↓
+CLEANED SOURCE CODE
+     ↓
+LEXICAL ANALYSIS
+     ↓
+TOKEN CLASSIFICATION
+     ↓
+ERROR DETECTION
+     ↓
+FINAL TOKEN STREAM
+     ↓
+SYMBOL TABLE
+```
+
+Represent this visually using connected stages.
+
+Each stage should show its current status:
+
+* Pending
+* Processing
+* Completed
+* Error
+
+Keep animations extremely subtle and fast.
+
+---
+
+# 6. MODULE 1 — SOURCE CODE PROCESSING
+
+Create a dedicated results panel.
+
+Title:
+
+**Module 1 — Source Code Processing**
+
+Show:
+
+### Original Source Code
+
+Display the user's original code.
+
+### Preprocessed Source Code
+
+Display the cleaned version.
+
+The preprocessing should:
+
+* Remove unnecessary whitespace
+* Remove unnecessary tabs
+* Remove blank lines
+* Remove comments
+* Preserve meaningful source-code structure
+
+Show a small summary:
+
+```text
+Original Lines: 15
+Cleaned Lines: 10
+Comments Removed: 2
+Blank Lines Removed: 3
+```
+
+Do not fabricate values; calculate them from the actual input.
+
+The module's output should be:
+
+**Cleaned and Preprocessed Source Code**
+
+This directly follows the project's defined Module 1.
+
+---
+
+# 7. MODULE 2 — LEXICAL ANALYSIS & TOKEN CLASSIFICATION
+
+Create a dedicated token-analysis section.
+
+Title:
+
+**Module 2 — Lexical Analysis & Token Classification**
+
+The analyzer should scan the preprocessed source code and identify lexemes.
+
+Classify tokens into:
+
+* Keywords
+* Identifiers
+* Operators
+* Literals
+* Delimiters
+* Comments
+
+Use the project's terminology consistently.
+
+For every token, display:
+
+| Line | Lexeme | Token Type | Value |
+| ---- | ------ | ---------- | ----- |
+| 1    | int    | Keyword    | int   |
+| 2    | main   | Identifier | main  |
+| 3    | (      | Delimiter  | (     |
+| 4    | )      | Delimiter  | )     |
+
+The exact results must be generated dynamically from the source code.
+
+Do NOT hard-code these results.
+
+Include token statistics such as:
+
+```text
+Total Tokens: 32
+Keywords: 6
+Identifiers: 8
+Operators: 7
+Literals: 5
+Delimiters: 6
+```
+
+Calculate everything dynamically.
+
+The output of this module is:
+
+**Classified Token Stream**
+
+This should match the project specification.
+
+---
+
+# 8. TOKEN VISUALIZATION
+
+Create a visually clear token stream.
+
+Example:
+
+```text
+int       → KEYWORD
+main      → IDENTIFIER
+(         → DELIMITER
+)         → DELIMITER
+{         → DELIMITER
+int       → KEYWORD
+a         → IDENTIFIER
+=         → OPERATOR
+10        → LITERAL
+;         → DELIMITER
+```
+
+Allow users to:
+
+* Filter by token type
+* Search tokens
+* Sort by line
+* Sort by token type
+
+Token-type filters:
+
+**All | Keywords | Identifiers | Operators | Literals | Delimiters | Comments**
+
+---
+
+# 9. MODULE 3 — ERROR DETECTION & TOKEN OUTPUT
+
+Create a section:
+
+**Module 3 — Error Detection & Token Output**
+
+The system must identify invalid or unknown tokens.
+
+For every lexical error display:
+
+```text
+Line: 7
+Column: 12
+Lexeme: @
+Error: Invalid or unknown token
+```
+
+Use clear error messages.
+
+If there are no errors:
+
+**✓ No lexical errors detected**
+
+If errors exist:
+
+**⚠ 3 lexical errors detected**
+
+The system should show:
+
+* Error count
+* Line number
+* Column number where possible
+* Invalid lexeme
+* Error description
+
+The project specifically requires lexical errors to be displayed with line numbers.
+
+---
+
+# 10. FINAL TOKEN STREAM
+
+After error detection, display:
+
+## Final Validated Token Stream
+
+Only validated tokens should appear in the final output.
+
+Provide:
+
+* Token number
+* Line
+* Lexeme
+* Token type
+* Status
+
+Example:
+
+| # | Line | Lexeme | Type       | Status |
+| - | ---: | ------ | ---------- | ------ |
+| 1 |    1 | int    | Keyword    | Valid  |
+| 2 |    1 | main   | Identifier | Valid  |
+| 3 |    1 | (      | Delimiter  | Valid  |
+
+Allow the user to:
+
+**Copy Token Stream**
+
+and optionally:
+
+**Export Results**
+
+---
+
+# 11. SYMBOL TABLE
+
+Create a professional symbol-table section.
+
+Title:
+
+**Symbol Table**
+
+Display identifiers discovered during lexical analysis.
+
+Columns:
+
+| # | Identifier | Type | Line | Value |
+| - | ---------- | ---- | ---: | ----- |
+| 1 | a          | int  |    4 | 10    |
+| 2 | b          | int  |    5 | 20    |
+| 3 | sum        | int  |    6 | a + b |
+
+The table must be generated from the user's code.
+
+Do not invent entries.
+
+The project specifically states that Module 3 updates the symbol table for later compiler phases.
+
+---
+
+# 12. ANALYSIS SUMMARY
+
+At the top of the results page, display a compact dashboard:
+
+```text
+ANALYSIS COMPLETE
+
+Processing Time      12 ms
+Total Tokens         32
+Valid Tokens         30
+Lexical Errors        2
+Identifiers           8
+Keywords              6
+Operators             7
+Literals              5
+Delimiters            6
+```
+
+All values must be dynamically calculated.
+
+Do not use fake static numbers.
+
+---
+
+# 13. SOURCE CODE HIGHLIGHTING
+
+After analysis, highlight the source code according to token types.
+
+For example:
+
+* Keywords → one visual treatment
+* Identifiers → another
+* Operators → another
+* Literals → another
+* Delimiters → another
+* Errors → clearly highlighted
+
+When the user clicks a token in the token table, highlight the corresponding lexeme in the source code.
+
+When the user clicks an error, automatically navigate to the relevant line.
+
+This interaction is important because it makes the project look like an actual intelligent compiler-analysis tool.
+
+---
+
+# 14. SYSTEM ARCHITECTURE PAGE
+
+Create a separate page:
+
+**System Architecture**
+
+Show the architecture described by the project:
+
+```text
+              SOURCE CODE
+                   │
+                   ▼
+        ┌─────────────────────┐
+        │ Source Code         │
+        │ Processing          │
+        └─────────────────────┘
+                   │
+                   ▼
+        ┌─────────────────────┐
+        │ Lexical Analysis &  │
+        │ Token Classification│
+        └─────────────────────┘
+                   │
+                   ▼
+        ┌─────────────────────┐
+        │ Error Detection &   │
+        │ Token Output        │
+        └─────────────────────┘
+                   │
+             ┌─────┴─────┐
+             ▼           ▼
+      Final Token     Symbol
+         Stream        Table
+```
+
+Make this visually polished.
+
+---
+
+# 15. PROJECT INFORMATION PAGE
+
+Create a compact **About Project** page.
+
+Include:
+
+### Introduction
+
+Lexical analysis is the first phase of a compiler that converts source code into meaningful tokens.
+
+Tokens include:
+
+* Keywords
+* Identifiers
+* Operators
+* Literals
+* Delimiters
+* Symbols
+
+The proposed system enhances token recognition, classification, and lexical error detection.
+
+### Objectives
+
+Include the project's objectives:
+
+* Develop an intelligent lexical analyzer that efficiently scans and processes source code.
+* Accurately identify and classify tokens.
+* Detect and report lexical errors.
+* Improve processing speed and accuracy.
+* Provide a reliable foundation for subsequent compiler phases.
+
+### Problem
+
+Explain that traditional lexical analyzers have limitations in intelligent token classification, lexical error reporting, processing large/complex source code, and flexibility across programming languages.
+
+### Proposed System
+
+Explain that the proposed system provides intelligent token recognition, classification, error detection, optimized processing, and extensibility to multiple programming languages.
+
+---
+
+# 16. EXISTING VS PROPOSED SYSTEM
+
+Create a simple comparison section.
+
+| Existing System         | Proposed System                  |
+| ----------------------- | -------------------------------- |
+| Basic tokenization      | Intelligent token classification |
+| Limited error detection | Detailed lexical error detection |
+| Minimal diagnostics     | Clear error messages             |
+| Often language-specific | Designed for extensibility       |
+| Limited optimization    | Optimized token recognition      |
+| Less detailed output    | Token stream + symbol table      |
+
+Keep this section concise and visually clean.
+
+---
+
+# 17. FUTURE SCOPE
+
+Create a Future Scope section based strictly on the project:
+
+* Support C++, Java, Python, and JavaScript.
+* Integration with IDEs.
+* Real-time tokenization and syntax highlighting.
+* AI-based lexical error prediction and correction.
+* Improved processing of large and complex source files.
+* Extension toward complete compiler phases such as syntax analysis, semantic analysis, and code optimization.
+
+Do not implement future features unless clearly marked as **Future Scope**.
+
+---
+
+# 18. IMPORTANT FUNCTIONAL REQUIREMENTS
+
+The website must actually process code.
+
+Do NOT create a fake UI where clicking "Analyze" only changes the screen.
+
+Implement an actual lexical-analysis engine.
+
+Initially prioritize **C language support**, since the project is focused on compiler/lexical analysis.
+
+The lexical analyzer should recognize at minimum:
+
+### Keywords
+
+```text
+auto
+break
+case
+char
+const
+continue
+default
+do
+double
+else
+enum
+extern
+float
+for
+goto
+if
+int
+long
+register
+return
+short
+signed
+sizeof
+static
+struct
+switch
+typedef
+union
+unsigned
+void
+volatile
+while
+```
+
+### Operators
+
+Support common C operators such as:
+
+```text
++
+-
+*
+/
+%
+=
+==
+!=
+<
+>
+<=
+>=
+&&
+||
+!
+++
+--
++=
+-=
+*=
+/=
+%
+```
+
+### Delimiters
+
+```text
+(
+)
+{
+}
+[
+]
+;
+,
+:
+```
+
+### Literals
+
+Support:
+
+* Integer literals
+* Floating-point literals
+* Character literals
+* String literals
+
+### Identifiers
+
+Recognize valid C identifiers according to lexical rules.
+
+### Comments
+
+Support:
+
+```c
+// single-line comments
+
+/* multi-line comments */
+```
+
+Comments should be removed during preprocessing but can be recognized/displayed in the analysis information where appropriate.
+
+---
+
+# 19. ERROR HANDLING
+
+Detect common lexical problems such as:
+
+* Invalid characters
+* Unknown symbols
+* Unterminated string literals
+* Unterminated character literals
+* Invalid identifiers
+* Invalid numeric literals
+* Unterminated comments where applicable
+
+Every error should include:
+
+```text
+Line
+Column
+Lexeme
+Error Type
+Description
+```
+
+Make error reporting understandable for students.
+
+---
+
+# 20. PERFORMANCE
+
+The application should be highly efficient.
+
+Requirements:
+
+* Avoid unnecessary API calls.
+* Perform lexical analysis locally in the browser whenever possible.
+* Avoid unnecessary re-rendering.
+* Handle reasonably large source files smoothly.
+* Debounce expensive operations.
+* Use efficient tokenization logic.
+* Keep the interface responsive.
+* Do not add unnecessary libraries.
+
+The goal is a **fast academic compiler-analysis tool**.
+
+---
+
+# 21. RESPONSIVE DESIGN
+
+The website must work on:
+
+* Desktop
+* Laptop
+* Tablet
+* Mobile
+
+Desktop should provide the best experience because source-code analysis is the primary use case.
+
+On mobile, stack the editor and analysis panels vertically.
+
+---
+
+# 22. NAVIGATION
+
+Use a simple navigation bar:
+
+**LexiCore / Intelligent Lexical Analyzer**
+
+Navigation:
+
+* Analyzer
+* Architecture
+* Project
+* Documentation
+
+Primary button:
+
+**Analyze Code**
+
+Do not overcrowd the navbar.
+
+---
+
+# 23. FOOTER
+
+Create a simple professional footer:
+
+**An Intelligent Lexical Analysis And Token Classification System**
+
+Capstone Project
+
+Presented by:
+
+**Tharunesh P (192421272)**
+**Sree Sharvesh (192424046)**
+**V. Naga Revanth (192411128)**
+
+Guided by:
+
+**Dr. W. Devi Priya**
+
+---
+
+# 24. TECHNOLOGY STACK
+
+Use a modern frontend stack.
+
+Preferred:
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* Lucide icons
+
+Use component-based architecture.
+
+Keep the lexical-analysis engine separated from the UI.
+
+Suggested structure:
+
+```text
+src/
+ ├── components/
+ │    ├── CodeEditor
+ │    ├── AnalysisPipeline
+ │    ├── TokenTable
+ │    ├── ErrorPanel
+ │    ├── SymbolTable
+ │    └── AnalysisSummary
+ │
+ ├── analyzer/
+ │    ├── lexer
+ │    ├── tokenizer
+ │    ├── preprocessor
+ │    ├── errorDetector
+ │    └── symbolTable
+ │
+ ├── pages/
+ │    ├── Analyzer
+ │    ├── Architecture
+ │    ├── Project
+ │    └── Documentation
+ │
+ └── App.tsx
+```
+
+---
+
+# 25. UX DETAILS
+
+Add small professional touches:
+
+* Loading state during analysis
+* Success state
+* Error state
+* Empty state
+* Tooltips
+* Copy buttons
+* Clear buttons
+* File upload
+* Download/export results
+* Token filtering
+* Error navigation
+* Keyboard shortcuts where useful
+
+Example:
+
+```text
+Ctrl + Enter → Analyze Code
+Esc → Clear
+```
+
+Do not overdo animations.
+
+---
+
+# 26. DOCUMENTATION PAGE
+
+Create a simple documentation page explaining:
+
+### What is lexical analysis?
+
+### What is a token?
+
+### Token categories
+
+### How preprocessing works
+
+### How lexical analysis works
+
+### How errors are detected
+
+### What is a symbol table?
+
+### How the three modules work
+
+Use diagrams and short explanations rather than huge paragraphs.
+
+---
+
+# 27. IMPORTANT PROJECT ACCURACY RULE
+
+This is a **capstone project based on an existing PPT**.
+
+Do not add unrelated AI features merely because the project title contains the word "Intelligent."
+
+The implementation must remain focused on:
+
+**Source Code Processing → Lexical Analysis → Token Classification → Error Detection → Token Output → Symbol Table**
+
+The project's stated conclusion is that the system improves efficient and accurate source-code processing, token classification, lexical-error detection, and provides a foundation for later compiler phases. Keep the website aligned with that purpose.
+
+---
+
+# 28. FINAL QUALITY REQUIREMENT
+
+The finished website should look like a **real software product developed for a compiler-design capstone project**, not like an AI-generated template.
+
+Prioritize:
+
+1. Functionality
+2. Accuracy
+3. Clean UI
+4. Performance
+5. Readability
+6. Professional presentation
+7. Responsive design
+
+The **Analyzer page is the most important part** of the application.
+
+When a user enters source code and presses Analyze, they should be able to clearly understand:
+
+**What entered → What was cleaned → What tokens were identified → How tokens were classified → What errors were found → What the final token stream is → What identifiers were added to the symbol table.**
+
+Build the complete application with reusable components, clean architecture, proper state management, and production-quality UI.
