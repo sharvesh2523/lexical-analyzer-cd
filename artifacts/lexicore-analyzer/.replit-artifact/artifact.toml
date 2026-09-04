@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "LexiCore Intelligent Analyzer"
+description = "A functional C-focused lexical analysis and token classification tool for capstone demonstrations. Analyze source code locally, inspect preprocessing, classified tokens, errors, final output, and the generated symbol table."
+version = "1.0.0"
+id = "artifacts/lexicore-analyzer"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23409
+
+[services.development]
+run = "pnpm --filter @workspace/lexicore-analyzer run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/lexicore-analyzer", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/lexicore-analyzer/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23409"
+BASE_PATH = "/"
